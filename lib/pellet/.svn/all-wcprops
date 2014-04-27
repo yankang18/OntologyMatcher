@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet
+END
+pellet-cli.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-cli.jar
+END
+pellet-jena.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-jena.jar
+END
+pellet-dig.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-dig.jar
+END
+pellet-test.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-test.jar
+END
+pellet-owlapiv3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-owlapiv3.jar
+END
+jgrapht-0.6.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/jgrapht-0.6.0.jar
+END
+pellet-owlapi.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-owlapi.jar
+END
+pellet-query.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-query.jar
+END
+jgrapht-jdk1.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/jgrapht-jdk1.6.jar
+END
+servlet.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/servlet.jar
+END
+pellet-datatypes.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-datatypes.jar
+END
+pellet-core.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-core.jar
+END
+pellet-modularity.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-modularity.jar
+END
+aterm-java-1.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/aterm-java-1.6.jar
+END
+pellet-rules.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-rules.jar
+END
+pellet-el.jar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-el.jar
+END
+pellet-explanation.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-explanation.jar
+END
+pellet-pellint.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/OntologyMatcher/lib/pellet/pellet-pellint.jar
+END

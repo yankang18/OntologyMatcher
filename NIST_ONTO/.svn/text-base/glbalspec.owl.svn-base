@@ -1,0 +1,1498 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY CAD "http://www.nist.gov/simca/msnm/sample/glbalspec.owl#CAD/" >
+]>
+
+
+<rdf:RDF xmlns="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#"
+     xml:base="http://www.nist.gov/simca/msnm/sample/glbalspec.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:CAD="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#CAD/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasEDMCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasEDMCapability">
+        <rdfs:range rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMCapability"/>
+        <rdfs:domain rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServiceDetails"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasIndustryFocus -->
+
+    <owl:ObjectProperty rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasIndustryFocus">
+        <rdfs:range rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+        <rdfs:domain rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServiceDetails"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasMachiningCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasMachiningCapability">
+        <rdfs:domain rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopServiceDetails"/>
+        <rdfs:range rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasMaterial -->
+
+    <owl:ObjectProperty rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasMaterial">
+        <rdfs:domain rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServiceDetails"/>
+        <rdfs:domain rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopServiceDetails"/>
+        <rdfs:range rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Material"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasMoldMakingCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasMoldMakingCapability">
+        <rdfs:domain rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServiceDetails"/>
+        <rdfs:range rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasService -->
+
+    <owl:ObjectProperty rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasService">
+        <rdfs:domain rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ServiceDetails"/>
+        <rdfs:range rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasServiceDetails -->
+
+    <owl:ObjectProperty rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasServiceDetails">
+        <rdfs:range rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ServiceDetails"/>
+        <rdfs:domain rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasSpecialtyMachining -->
+
+    <owl:ObjectProperty rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasSpecialtyMachining"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#isSpecialty -->
+
+    <owl:ObjectProperty rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#isSpecialty">
+        <rdfs:range rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Capability"/>
+        <rdfs:domain rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ServiceDetails"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#doMicroMachining -->
+
+    <owl:DatatypeProperty rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#doMicroMachining">
+        <rdfs:domain rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServiceDetails"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasPartLengthValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasPartLengthValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Capability -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Capability"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ContractManufacturingAndFabrication -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ContractManufacturingAndFabrication">
+        <rdfs:subClassOf rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ServiceAndConsultantsCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMCapability -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMCapability">
+        <rdfs:subClassOf rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Capability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServiceDetails -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServiceDetails">
+        <rdfs:subClassOf rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ServiceDetails"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasSpecialtyMachining"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+                            <rdf:Description rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices">
+        <rdfs:subClassOf rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService">
+        <rdfs:subClassOf rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopServiceDetails -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopServiceDetails">
+        <rdfs:subClassOf rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ServiceDetails"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopServices -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopServices">
+        <rdfs:subClassOf rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ContractManufacturingAndFabrication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability">
+        <rdfs:subClassOf rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Capability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasSpecialtyMachining"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+                            <rdf:Description rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Material -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Material"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServiceDetails -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServiceDetails">
+        <rdfs:subClassOf rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ServiceDetails"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServices -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServices">
+        <rdfs:subClassOf rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#PartFabricationServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#PartFabricationServices -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#PartFabricationServices">
+        <rdfs:subClassOf rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ContractManufacturingAndFabrication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ServiceAndConsultantsCategory -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ServiceAndConsultantsCategory"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ServiceDetails -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ServiceDetails"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier -->
+
+    <owl:Class rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Abrasive_Flow_Machining -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Abrasive_Flow_Machining">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Aerospace -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Aerospace">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Aluminum -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Aluminum">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Assembly_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Assembly_Services">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Automotive -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Automotive">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Blow_Molding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Blow_Molding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Brass -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Brass">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Broaching -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Broaching">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#CAD/CAM_Support -->
+
+    <owl:NamedIndividual rdf:about="&CAD;CAM_Support">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#CNC_Machining -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#CNC_Machining">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Casting_Machining -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Casting_Machining">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Centerless_Grinding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Centerless_Grinding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Ceramics -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Ceramics">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Compression_Molding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Compression_Molding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Creep_Feed_Grinding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Creep_Feed_Grinding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Deep_Hole_Drilling -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Deep_Hole_Drilling">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Design_Assistance -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Design_Assistance">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Die_Casting -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Die_Casting">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Double-disc_Grinding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Double-disc_Grinding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Drilling -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Drilling">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ElectricalOrElectronics -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ElectricalOrElectronics">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Electrochemical_Photochemical_Machining -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Electrochemical_Photochemical_Machining">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Electrode_EDM -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Electrode_EDM">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Electrode_EDM_Capability -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Electrode_EDM_Capability">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Etching_Chemical_Milling -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Etching_Chemical_Milling">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Extrusion_Machining -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Extrusion_Machining">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Field_Machining -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Field_Machining">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Food_Processing -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Food_Processing">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Forging_Machining -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Forging_Machining">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Gear_Manufacturing -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Gear_Manufacturing">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Glass -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Glass">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Glass_Ceramics -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Glass_Ceramics">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Hardened_Metals -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Hardened_Metals">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#High_Volume_Production -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#High_Volume_Production">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Honing -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Honing">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ID_Internal_Grinding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ID_Internal_Grinding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industrial -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industrial">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Injection_Molding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Injection_Molding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Investment_Casting -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Investment_Casting">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Jig_Boring -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Jig_Boring">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Jig_Grinding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Jig_Grinding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Jigs_and_Fixtures -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Jigs_and_Fixtures">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Just-in-Time_Delivery -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Just-in-Time_Delivery">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Laser_Machining -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Laser_Machining">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Low_Volume_Production -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Low_Volume_Production">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Marine -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Marine">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MaxLength -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MaxLength"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Medical -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Medical">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Micro_Machining -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Micro_Machining">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Military -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Military">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Milling -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Milling">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MinLength -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MinLength"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Model_Making -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Model_Making">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Mold_Texturing -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Mold_Texturing">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#OD_External_Grinding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#OD_External_Grinding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Optical -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Optical">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Other -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Other">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Other_Industry -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Other_Industry">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Other_Mold_Or_Process_Type -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Other_Mold_Or_Process_Type">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Other_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Other_Services">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Permanent_Mold_Casting -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Permanent_Mold_Casting">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Pharmaceutical -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Pharmaceutical">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Powder_Metal_Molding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Powder_Metal_Molding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Production_Facilities -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Production_Facilities">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Prototype_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Prototype_Services">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Prototyping -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Prototyping">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Repair-Maintenance -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Repair-Maintenance">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Reverse_Engineering -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Reverse_Engineering">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Rotational_Molding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Rotational_Molding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Sand_Casting -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Sand_Casting">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Screw_Machining -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Screw_Machining">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Semiconduction -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Semiconduction">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Small_Hole_EDM_Capability -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Small_Hole_EDM_Capability">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Stainless_Steel -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Stainless_Steel">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Steel-Steel_Alloys -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Steel-Steel_Alloys">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_2">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier"/>
+        <hasServiceDetails rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_2_EDM_Machining_Service"/>
+        <hasServiceDetails rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_2_Mold_Making_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_2_EDM_Machining_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_2_EDM_Machining_Service">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServiceDetails"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasPartLengthValue"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="&xsd;float">48.0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasPartLengthValue"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="&xsd;float">1.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <doMicroMachining rdf:datatype="&xsd;boolean">true</doMicroMachining>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Aluminum"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Brass"/>
+        <hasService rdf:resource="&CAD;CAM_Support"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Design_Assistance"/>
+        <hasEDMCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Electrode_EDM_Capability"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Hardened_Metals"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#High_Volume_Production"/>
+        <isSpecialty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Jigs_and_Fixtures"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Just-in-Time_Delivery"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Low_Volume_Production"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Prototype_Services"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Reverse_Engineering"/>
+        <hasEDMCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Small_Hole_EDM_Capability"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Stainless_Steel"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Steel-Steel_Alloys"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Titanium"/>
+        <isSpecialty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Tool_and_Die_Manufacturing"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Ultra-hard_Materials"/>
+        <hasEDMCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Wire_EDM_Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_2_Mold_Making_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_2_Mold_Making_Service">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServiceDetails"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServices"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Aerospace"/>
+        <hasService rdf:resource="&CAD;CAM_Support"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Compression_Molding"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Design_Assistance"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ElectricalOrElectronics"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industrial"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Marine"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Medical"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Military"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Model_Making"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Mold_Texturing"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Optical"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Permanent_Mold_Casting"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Powder_Metal_Molding"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Production_Facilities"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Prototyping"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Repair-Maintenance"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Sand_Casting"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Semiconduction"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Thermoforming"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Transfer_Molding"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_3">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier"/>
+        <hasServiceDetails rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_3_EDM_Machining_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_3_EDM_Machining_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_3_EDM_Machining_Service">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServiceDetails"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasPartLengthValue"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="&xsd;float">6</xsd:minExclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="&xsd;float">48</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <doMicroMachining rdf:datatype="&xsd;boolean">false</doMicroMachining>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Aluminum"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Brass"/>
+        <hasService rdf:resource="&CAD;CAM_Support"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Hardened_Metals"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#High_Volume_Production"/>
+        <isSpecialty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Jigs_and_Fixtures"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Just-in-Time_Delivery"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Low_Volume_Production"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Reverse_Engineering"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Stainless_Steel"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Steel-Steel_Alloys"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Titanium"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Ultra-hard_Materials"/>
+        <hasEDMCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Wire_EDM_Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_4">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier"/>
+        <hasServiceDetails rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_4_EDM_Machining_Service"/>
+        <hasServiceDetails rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_4_Machine_Shop_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_4_EDM_Machining_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_4_EDM_Machining_Service">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServiceDetails"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasPartLengthValue"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;float">1.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;float">3.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasPartLengthValue"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;float">6.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;float">3.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#hasPartLengthValue"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="&xsd;float">1.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <doMicroMachining rdf:datatype="&xsd;boolean">true</doMicroMachining>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Aluminum"/>
+        <hasService rdf:resource="&CAD;CAM_Support"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Design_Assistance"/>
+        <hasEDMCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Electrode_EDM_Capability"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Hardened_Metals"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#High_Volume_Production"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Low_Volume_Production"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Prototype_Services"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Reverse_Engineering"/>
+        <hasEDMCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Small_Hole_EDM_Capability"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Stainless_Steel"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Steel-Steel_Alloys"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Titanium"/>
+        <isSpecialty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Tool_and_Die_Manufacturing"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Ultra-hard_Materials"/>
+        <hasEDMCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Wire_EDM_Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_4_Machine_Shop_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_4_Machine_Shop_Service">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopServiceDetails"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Aluminum"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Assembly_Services"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Brass"/>
+        <hasService rdf:resource="&CAD;CAM_Support"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#CNC_Machining"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Centerless_Grinding"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Design_Assistance"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Drilling"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Electrochemical_Photochemical_Machining"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Electrode_EDM"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Etching_Chemical_Milling"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Field_Machining"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Gear_Manufacturing"/>
+        <isSpecialty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Gear_Manufacturing"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Hardened_Metals"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#High_Volume_Production"/>
+        <isSpecialty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Jigs_and_Fixtures"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Jigs_and_Fixtures"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Just-in-Time_Delivery"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Laser_Machining"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Low_Volume_Production"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Micro_Machining"/>
+        <isSpecialty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Micro_Machining"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Milling"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Prototype_Services"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Reverse_Engineering"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Screw_Machining"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Stainless_Steel"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Steel-Steel_Alloys"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Surface_Grinding"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Swiss_Machining"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Thread_Rolling"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Titanium"/>
+        <isSpecialty rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Tool_and_Die_Manufacturing"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Tool_and_Die_Manufacturing"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Turning"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Ultra-hard_Materials"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Wire_EDM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_5">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier"/>
+        <hasServiceDetails rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_5_Maching_Shop_Service"/>
+        <hasServiceDetails rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_5_Mold_Making_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_5_Maching_Shop_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_5_Maching_Shop_Service">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopServiceDetails"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Aluminum"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Assembly_Services"/>
+        <hasService rdf:resource="&CAD;CAM_Support"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#CNC_Machining"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Deep_Hole_Drilling"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Design_Assistance"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Drilling"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ID_Internal_Grinding"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Jig_Grinding"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Laser_Machining"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Low_Volume_Production"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Milling"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#OD_External_Grinding"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Prototype_Services"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Stainless_Steel"/>
+        <hasMaterial rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Steel-Steel_Alloys"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Turning"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Water_Abrasive_Jet_Machining"/>
+        <hasMachiningCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Wire_EDM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_5_Mold_Making_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_5_Mold_Making_Service">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServiceDetails"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServices"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Automotive"/>
+        <hasService rdf:resource="&CAD;CAM_Support"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Design_Assistance"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Injection_Molding"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Model_Making"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Production_Facilities"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Prototyping"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Repair-Maintenance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_6">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier"/>
+        <hasServiceDetails rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_6_Mold_Making_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_6_Mold_Making_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Supplier_6_Mold_Making_Service">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServiceDetails"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldMakingServices"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Aerospace"/>
+        <hasService rdf:resource="&CAD;CAM_Support"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Compression_Molding"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Design_Assistance"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Die_Casting"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#ElectricalOrElectronics"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Food_Processing"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Industrial"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Injection_Molding"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Investment_Casting"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Marine"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Medical"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Military"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Mold_Texturing"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Optical"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Permanent_Mold_Casting"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Pharmaceutical"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Powder_Metal_Molding"/>
+        <hasService rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Production_Facilities"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Sand_Casting"/>
+        <hasIndustryFocus rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Semiconduction"/>
+        <hasMoldMakingCapability rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Thermoforming"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Surface_Grinding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Surface_Grinding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Swiss_Machining -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Swiss_Machining">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Thermoforming -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Thermoforming">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Thread_Grinding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Thread_Grinding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Thread_Rolling -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Thread_Rolling">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Titanium -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Titanium">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Tool_and_Die_Manufacturing -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Tool_and_Die_Manufacturing">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Transfer_Molding -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Transfer_Molding">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MoldOrProcessType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Turning -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Turning">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Ultra-hard_Materials -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Ultra-hard_Materials">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMMachiningServices"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Water_Abrasive_Jet_Machining -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Water_Abrasive_Jet_Machining">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Wire_EDM -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Wire_EDM">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachineShopService"/>
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#MachiningCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Wire_EDM_Capability -->
+
+    <owl:NamedIndividual rdf:about="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#Wire_EDM_Capability">
+        <rdf:type rdf:resource="http://www.nist.gov/simca/msnm/sample/glbalspec.owl#EDMCapability"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+

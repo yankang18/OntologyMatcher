@@ -1,0 +1,1488 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY thomasnet "http://www.nist.gov/simca/msnm/sample/thomasnet.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.nist.gov/simca/msnm/sample/thomasnet.owl#"
+     xml:base="http://www.nist.gov/simca/msnm/sample/thomasnet.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:thomasnet="http://www.nist.gov/simca/msnm/sample/thomasnet.owl#">
+    <owl:Ontology rdf:about="http://www.nist.gov/simca/msnm/sample/thomasnet.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasCapability -->
+
+    <owl:ObjectProperty rdf:about="&thomasnet;hasCapability">
+        <rdfs:range rdf:resource="&thomasnet;Capability"/>
+        <rdfs:domain rdf:resource="&thomasnet;Supplier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasCapabilityUnitCode -->
+
+    <owl:ObjectProperty rdf:about="&thomasnet;hasCapabilityUnitCode">
+        <rdfs:domain rdf:resource="&thomasnet;Capability"/>
+        <rdfs:range rdf:resource="&thomasnet;UnitCode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasEquipment -->
+
+    <owl:ObjectProperty rdf:about="&thomasnet;hasEquipment">
+        <rdfs:domain rdf:resource="&thomasnet;Capability"/>
+        <rdfs:range rdf:resource="&thomasnet;EquipmentType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasIndustryFocus -->
+
+    <owl:ObjectProperty rdf:about="&thomasnet;hasIndustryFocus">
+        <rdfs:domain rdf:resource="&thomasnet;Capability"/>
+        <rdfs:range rdf:resource="&thomasnet;Industry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasMaterial -->
+
+    <owl:ObjectProperty rdf:about="&thomasnet;hasMaterial">
+        <rdfs:domain rdf:resource="&thomasnet;Capability"/>
+        <rdfs:range rdf:resource="&thomasnet;Material"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasMaxLengthUnit -->
+
+    <owl:ObjectProperty rdf:about="&thomasnet;hasMaxLengthUnit">
+        <rdfs:subPropertyOf rdf:resource="&thomasnet;hasCapabilityUnitCode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasMoldType -->
+
+    <owl:ObjectProperty rdf:about="&thomasnet;hasMoldType">
+        <rdfs:domain rdf:resource="&thomasnet;Capability"/>
+        <rdfs:range rdf:resource="&thomasnet;MoldType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasProcess -->
+
+    <owl:ObjectProperty rdf:about="&thomasnet;hasProcess">
+        <rdfs:domain rdf:resource="&thomasnet;Capability"/>
+        <rdfs:range rdf:resource="&thomasnet;Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasProductionVolumeMaxUnit -->
+
+    <owl:ObjectProperty rdf:about="&thomasnet;hasProductionVolumeMaxUnit">
+        <rdfs:subPropertyOf rdf:resource="&thomasnet;hasCapabilityUnitCode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasProductionVolumeMinUnit -->
+
+    <owl:ObjectProperty rdf:about="&thomasnet;hasProductionVolumeMinUnit">
+        <rdfs:subPropertyOf rdf:resource="&thomasnet;hasCapabilityUnitCode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasToleranceUnit -->
+
+    <owl:ObjectProperty rdf:about="&thomasnet;hasToleranceUnit">
+        <rdfs:subPropertyOf rdf:resource="&thomasnet;hasCapabilityUnitCode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasCapabilityAttributes -->
+
+    <owl:DatatypeProperty rdf:about="&thomasnet;hasCapabilityAttributes">
+        <rdfs:domain rdf:resource="&thomasnet;Capability"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasMaxLength -->
+
+    <owl:DatatypeProperty rdf:about="&thomasnet;hasMaxLength">
+        <rdfs:domain rdf:resource="&thomasnet;Capability"/>
+        <rdfs:subPropertyOf rdf:resource="&thomasnet;hasCapabilityAttributes"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasProductionVolumeMax -->
+
+    <owl:DatatypeProperty rdf:about="&thomasnet;hasProductionVolumeMax">
+        <rdfs:domain rdf:resource="&thomasnet;Capability"/>
+        <rdfs:subPropertyOf rdf:resource="&thomasnet;hasCapabilityAttributes"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasProductionVolumeMin -->
+
+    <owl:DatatypeProperty rdf:about="&thomasnet;hasProductionVolumeMin">
+        <rdfs:domain rdf:resource="&thomasnet;Capability"/>
+        <rdfs:subPropertyOf rdf:resource="&thomasnet;hasCapabilityAttributes"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#hasTolerance -->
+
+    <owl:DatatypeProperty rdf:about="&thomasnet;hasTolerance">
+        <rdfs:domain rdf:resource="&thomasnet;Capability"/>
+        <rdfs:subPropertyOf rdf:resource="&thomasnet;hasCapabilityAttributes"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#CNC -->
+
+    <owl:Class rdf:about="&thomasnet;CNC">
+        <rdfs:subClassOf rdf:resource="&thomasnet;Machining"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#CNCMachining -->
+
+    <owl:Class rdf:about="&thomasnet;CNCMachining">
+        <rdfs:subClassOf rdf:resource="&thomasnet;CNC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Capability -->
+
+    <owl:Class rdf:about="&thomasnet;Capability"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#ComplexAndDifficultMachining -->
+
+    <owl:Class rdf:about="&thomasnet;ComplexAndDifficultMachining">
+        <rdfs:subClassOf rdf:resource="&thomasnet;GeneralMachining"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#CustomManufacturingAndFabricating -->
+
+    <owl:Class rdf:about="&thomasnet;CustomManufacturingAndFabricating">
+        <rdfs:subClassOf rdf:resource="&thomasnet;ProductOrServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#DiesAndMolds -->
+
+    <owl:Class rdf:about="&thomasnet;DiesAndMolds">
+        <rdfs:subClassOf rdf:resource="&thomasnet;MachineryToolsAndSupplies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#EDM -->
+
+    <owl:Class rdf:about="&thomasnet;EDM">
+        <rdfs:subClassOf rdf:resource="&thomasnet;Machining"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#EquipmentType -->
+
+    <owl:Class rdf:about="&thomasnet;EquipmentType"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#GeneralMachining -->
+
+    <owl:Class rdf:about="&thomasnet;GeneralMachining">
+        <rdfs:subClassOf rdf:resource="&thomasnet;Machining"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Industry -->
+
+    <owl:Class rdf:about="&thomasnet;Industry"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#InjectionMolds -->
+
+    <owl:Class rdf:about="&thomasnet;InjectionMolds">
+        <rdfs:subClassOf rdf:resource="&thomasnet;DiesAndMolds"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#MachineryToolsAndSupplies -->
+
+    <owl:Class rdf:about="&thomasnet;MachineryToolsAndSupplies">
+        <rdfs:subClassOf rdf:resource="&thomasnet;ProductOrServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Machining -->
+
+    <owl:Class rdf:about="&thomasnet;Machining">
+        <rdfs:subClassOf rdf:resource="&thomasnet;CustomManufacturingAndFabricating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Material -->
+
+    <owl:Class rdf:about="&thomasnet;Material"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#MoldType -->
+
+    <owl:Class rdf:about="&thomasnet;MoldType"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Process -->
+
+    <owl:Class rdf:about="&thomasnet;Process"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#ProductOrServiceCategory -->
+
+    <owl:Class rdf:about="&thomasnet;ProductOrServiceCategory"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#RamEDM -->
+
+    <owl:Class rdf:about="&thomasnet;RamEDM">
+        <rdfs:subClassOf rdf:resource="&thomasnet;EDM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#SinkerEDM -->
+
+    <owl:Class rdf:about="&thomasnet;SinkerEDM">
+        <rdfs:subClassOf rdf:resource="&thomasnet;EDM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#SmallHoleEDM -->
+
+    <owl:Class rdf:about="&thomasnet;SmallHoleEDM">
+        <rdfs:subClassOf rdf:resource="&thomasnet;EDM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Supplier -->
+
+    <owl:Class rdf:about="&thomasnet;Supplier"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#SupplierCapability -->
+
+    <owl:Class rdf:about="&thomasnet;SupplierCapability">
+        <rdfs:subClassOf rdf:resource="&thomasnet;Capability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#UnitCode -->
+
+    <owl:Class rdf:about="&thomasnet;UnitCode"/>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#WireEDMServices -->
+
+    <owl:Class rdf:about="&thomasnet;WireEDMServices">
+        <rdfs:subClassOf rdf:resource="&thomasnet;EDM"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#A-2_Tool_Steel -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;A-2_Tool_Steel">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#A-6_Tool_Steel -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;A-6_Tool_Steel">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Aerospace -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Aerospace">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Alloy_Steel -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Alloy_Steel">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Alloy_Steels_4140 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Alloy_Steels_4140">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Aluminum -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Aluminum">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Automotive -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Automotive">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Blow_Molds_(Extrusion_or_Injection_Blow) -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Blow_Molds_(Extrusion_or_Injection_Blow)">
+        <rdf:type rdf:resource="&thomasnet;MoldType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Brass -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Brass">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Building_Construction -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Building_Construction">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#CNCAndConventionalMachining_TurningAndMilling -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;CNCAndConventionalMachining_TurningAndMilling">
+        <rdf:type rdf:resource="&thomasnet;CNCMachining"/>
+        <rdf:type rdf:resource="&thomasnet;SinkerEDM"/>
+        <rdf:type rdf:resource="&thomasnet;SupplierCapability"/>
+        <rdf:type rdf:resource="&thomasnet;WireEDMServices"/>
+        <hasProductionVolumeMax rdf:datatype="&xsd;int">1</hasProductionVolumeMax>
+        <hasProductionVolumeMin rdf:datatype="&xsd;int">1</hasProductionVolumeMin>
+        <hasMaterial rdf:resource="&thomasnet;Aluminum"/>
+        <hasMaterial rdf:resource="&thomasnet;Brass"/>
+        <hasMaterial rdf:resource="&thomasnet;Columbium"/>
+        <hasProductionVolumeMinUnit rdf:resource="&thomasnet;EA"/>
+        <hasProcess rdf:resource="&thomasnet;Plunger_EDM_Process"/>
+        <hasProcess rdf:resource="&thomasnet;Ram_EDM_Process"/>
+        <hasProcess rdf:resource="&thomasnet;Sinker_EDM_Process"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel_300_Series"/>
+        <hasProductionVolumeMaxUnit rdf:resource="&thomasnet;Thousand"/>
+        <hasMaterial rdf:resource="&thomasnet;Titanium"/>
+        <hasMaterial rdf:resource="&thomasnet;Titanium_Alloy_CP2"/>
+        <hasMaterial rdf:resource="&thomasnet;Titanium_Alloy_CP4"/>
+        <hasMaterial rdf:resource="&thomasnet;Titanium_Alloy_Ti_6AI-4V"/>
+        <hasMaterial rdf:resource="&thomasnet;Titanium_Alloy_Ti_6AI-4V_ELI"/>
+        <hasProcess rdf:resource="&thomasnet;Wire_EDM_Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#CNC_3-axis_Milling_Machine -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;CNC_3-axis_Milling_Machine">
+        <rdf:type rdf:resource="&thomasnet;EquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#CNC_4-axis_Milling_Machine -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;CNC_4-axis_Milling_Machine">
+        <rdf:type rdf:resource="&thomasnet;EquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#CNC_Machining -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;CNC_Machining">
+        <rdf:type rdf:resource="&thomasnet;CNCMachining"/>
+        <rdf:type rdf:resource="&thomasnet;SinkerEDM"/>
+        <rdf:type rdf:resource="&thomasnet;SupplierCapability"/>
+        <hasMaterial rdf:resource="&thomasnet;A-2_Tool_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;A-6_Tool_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;Alloy_Steels_4140"/>
+        <hasMaterial rdf:resource="&thomasnet;Aluminum"/>
+        <hasMaterial rdf:resource="&thomasnet;H-13_Tool_Steel"/>
+        <hasProcess rdf:resource="&thomasnet;Sinker_EDM_Process"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;Titanium"/>
+        <hasMaterial rdf:resource="&thomasnet;Tool_Steel"/>
+        <hasProcess rdf:resource="&thomasnet;Wire_EDM_Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#CR_HR_Steel -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;CR_HR_Steel">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Carbon_Steel -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Carbon_Steel">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Castings -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Castings">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Chrome -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Chrome">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Cobalt -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Cobalt">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Collapsible_Core -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Collapsible_Core">
+        <rdf:type rdf:resource="&thomasnet;MoldType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Columbium -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Columbium">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Commercial -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Commercial">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Communication -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Communication">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Consumer_Goods -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Consumer_Goods">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#CustomMoldsforPlasticRubberDieCastParts -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;CustomMoldsforPlasticRubberDieCastParts">
+        <rdf:type rdf:resource="&thomasnet;InjectionMolds"/>
+        <rdf:type rdf:resource="&thomasnet;SupplierCapability"/>
+        <hasMaterial rdf:resource="&thomasnet;A-2_Tool_Steel"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Aerospace"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Automotive"/>
+        <hasEquipment rdf:resource="&thomasnet;CNC_3-axis_Milling_Machine"/>
+        <hasEquipment rdf:resource="&thomasnet;CNC_4-axis_Milling_Machine"/>
+        <hasMaterial rdf:resource="&thomasnet;CR_HR_Steel"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Commercial"/>
+        <hasMaterial rdf:resource="&thomasnet;D2_Tool_Steel"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Electrical_Connectors"/>
+        <hasMaterial rdf:resource="&thomasnet;H-13_Tool_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;M2_Tool_Steel"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Medical"/>
+        <hasMaterial rdf:resource="&thomasnet;S7_Tool_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel_15-4"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel_17-4"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel_300"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel_302"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel_304"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel_316"/>
+        <hasMaterial rdf:resource="&thomasnet;Tool_Steel_4130"/>
+        <hasMaterial rdf:resource="&thomasnet;Tool_Steel_4340"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#D2_Tool_Steel -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;D2_Tool_Steel">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Die_Cast_Molds -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Die_Cast_Molds">
+        <rdf:type rdf:resource="&thomasnet;MoldType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#EA -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;EA">
+        <rdf:type rdf:resource="&thomasnet;UnitCode"/>
+        <rdfs:comment>Each part/piece count</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#EDM_Capability -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;EDM_Capability">
+        <rdf:type rdf:resource="&thomasnet;EDM"/>
+        <rdf:type rdf:resource="&thomasnet;SupplierCapability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#EDM_Drilling_Process -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;EDM_Drilling_Process">
+        <rdf:type rdf:resource="&thomasnet;Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#EDM_Machine -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;EDM_Machine">
+        <rdf:type rdf:resource="&thomasnet;EquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Electrical -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Electrical">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#ElectricalDischargeMachiningServices -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;ElectricalDischargeMachiningServices">
+        <rdf:type rdf:resource="&thomasnet;EDM"/>
+        <rdf:type rdf:resource="&thomasnet;RamEDM"/>
+        <rdf:type rdf:resource="&thomasnet;SinkerEDM"/>
+        <rdf:type rdf:resource="&thomasnet;SupplierCapability"/>
+        <hasTolerance rdf:datatype="&xsd;float">0.0025</hasTolerance>
+        <hasProductionVolumeMin rdf:datatype="&xsd;int">1</hasProductionVolumeMin>
+        <hasProductionVolumeMax rdf:datatype="&xsd;int">1000</hasProductionVolumeMax>
+        <hasMaxLength rdf:datatype="&xsd;float">20</hasMaxLength>
+        <hasMaterial rdf:resource="&thomasnet;Alloy_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;Aluminum"/>
+        <hasMaterial rdf:resource="&thomasnet;Brass"/>
+        <hasMaterial rdf:resource="&thomasnet;Carbon_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;Cobalt"/>
+        <hasProductionVolumeMaxUnit rdf:resource="&thomasnet;EA"/>
+        <hasProductionVolumeMinUnit rdf:resource="&thomasnet;EA"/>
+        <hasMaxLengthUnit rdf:resource="&thomasnet;Inch"/>
+        <hasProcess rdf:resource="&thomasnet;Sinker_EDM_Process"/>
+        <hasProcess rdf:resource="&thomasnet;Small_Hole_EDM_Process"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel"/>
+        <hasProcess rdf:resource="&thomasnet;Wire_EDM_Process"/>
+        <hasToleranceUnit rdf:resource="&thomasnet;mm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Electrical_Connectors -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Electrical_Connectors">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Electrode_Machining_Process -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Electrode_Machining_Process">
+        <rdf:type rdf:resource="&thomasnet;Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Electronic -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Electronic">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Engraving_Machine -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Engraving_Machine">
+        <rdf:type rdf:resource="&thomasnet;EquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Extrusions -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Extrusions">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Ferrous -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Ferrous">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Food_Processing -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Food_Processing">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Forgings -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Forgings">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Fully_Hardened_Tool_Steel -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Fully_Hardened_Tool_Steel">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#H-13_Tool_Steel -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;H-13_Tool_Steel">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Honing_Machine -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Honing_Machine">
+        <rdf:type rdf:resource="&thomasnet;EquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Hot_Runners -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Hot_Runners">
+        <rdf:type rdf:resource="&thomasnet;MoldType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Inch -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Inch">
+        <rdf:type rdf:resource="&thomasnet;UnitCode"/>
+        <rdfs:comment>Length measure in inches</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Industrial -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Industrial">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Inserts_Only -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Inserts_Only">
+        <rdf:type rdf:resource="&thomasnet;MoldType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Jig_Grinder_Machine -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Jig_Grinder_Machine">
+        <rdf:type rdf:resource="&thomasnet;EquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Lathe_Machine -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Lathe_Machine">
+        <rdf:type rdf:resource="&thomasnet;EquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Liquid_Silicone_Molds -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Liquid_Silicone_Molds">
+        <rdf:type rdf:resource="&thomasnet;MoldType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#M2_Tool_Steel -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;M2_Tool_Steel">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Marine -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Marine">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Medical -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Medical">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Military_Government -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Military_Government">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#MoldDesignAndBuild -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;MoldDesignAndBuild">
+        <rdf:type rdf:resource="&thomasnet;InjectionMolds"/>
+        <rdf:type rdf:resource="&thomasnet;SupplierCapability"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Aerospace"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Building_Construction"/>
+        <hasMoldType rdf:resource="&thomasnet;Collapsible_Core"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Communication"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Consumer_Goods"/>
+        <hasMoldType rdf:resource="&thomasnet;Die_Cast_Molds"/>
+        <hasEquipment rdf:resource="&thomasnet;EDM_Machine"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Electrical"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Electronic"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Food_Processing"/>
+        <hasMaterial rdf:resource="&thomasnet;H-13_Tool_Steel"/>
+        <hasMoldType rdf:resource="&thomasnet;Hot_Runners"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Industrial"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Marine"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Medical"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Military_Government"/>
+        <hasMoldType rdf:resource="&thomasnet;Multi-Cavity_Family_Injection_Molds"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Music"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Optical"/>
+        <hasMaterial rdf:resource="&thomasnet;P-20"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Recreational_Vehicle"/>
+        <hasEquipment rdf:resource="&thomasnet;Verticle_CNC_Milling_Machine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Multi-Cavity_Family_Injection_Molds -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Multi-Cavity_Family_Injection_Molds">
+        <rdf:type rdf:resource="&thomasnet;MoldType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Music -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Music">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Non-Ferrouss -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Non-Ferrouss">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Optical -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Optical">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Others -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Others">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#P-20 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;P-20">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#PlasticMoldMakingServices -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;PlasticMoldMakingServices">
+        <rdf:type rdf:resource="&thomasnet;InjectionMolds"/>
+        <rdf:type rdf:resource="&thomasnet;SupplierCapability"/>
+        <hasMaterial rdf:resource="&thomasnet;Aluminum"/>
+        <hasMoldType rdf:resource="&thomasnet;Blow_Molds_(Extrusion_or_Injection_Blow)"/>
+        <hasEquipment rdf:resource="&thomasnet;Engraving_Machine"/>
+        <hasMaterial rdf:resource="&thomasnet;Fully_Hardened_Tool_Steel"/>
+        <hasEquipment rdf:resource="&thomasnet;Honing_Machine"/>
+        <hasMoldType rdf:resource="&thomasnet;Hot_Runners"/>
+        <hasMoldType rdf:resource="&thomasnet;Inserts_Only"/>
+        <hasEquipment rdf:resource="&thomasnet;Jig_Grinder_Machine"/>
+        <hasEquipment rdf:resource="&thomasnet;Lathe_Machine"/>
+        <hasMoldType rdf:resource="&thomasnet;Liquid_Silicone_Molds"/>
+        <hasMoldType rdf:resource="&thomasnet;Plastic_Injection"/>
+        <hasMaterial rdf:resource="&thomasnet;Pre-hardened_Steel"/>
+        <hasEquipment rdf:resource="&thomasnet;Sinker_EDM_Machine"/>
+        <hasEquipment rdf:resource="&thomasnet;Surface_Grinder_Machine"/>
+        <hasMoldType rdf:resource="&thomasnet;Transfer_Compression_(Rubber_or_Silicone)"/>
+        <hasEquipment rdf:resource="&thomasnet;Verticle_CNC_Milling_Machine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Plastic_Injection -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Plastic_Injection">
+        <rdf:type rdf:resource="&thomasnet;MoldType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Plastics -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Plastics">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Plunger_EDM_Process -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Plunger_EDM_Process">
+        <rdf:type rdf:resource="&thomasnet;Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Pre-hardened_Steel -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Pre-hardened_Steel">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#PrototypeAndProductionMoldDesignAndManufacturing -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;PrototypeAndProductionMoldDesignAndManufacturing">
+        <rdf:type rdf:resource="&thomasnet;InjectionMolds"/>
+        <rdf:type rdf:resource="&thomasnet;SupplierCapability"/>
+        <hasMaterial rdf:resource="&thomasnet;A-2_Tool_Steel"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Aerospace"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Automotive"/>
+        <hasEquipment rdf:resource="&thomasnet;CNC_3-axis_Milling_Machine"/>
+        <hasEquipment rdf:resource="&thomasnet;CNC_4-axis_Milling_Machine"/>
+        <hasMaterial rdf:resource="&thomasnet;CR_HR_Steel"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Commercial"/>
+        <hasMaterial rdf:resource="&thomasnet;D2_Tool_Steel"/>
+        <hasEquipment rdf:resource="&thomasnet;EDM_Machine"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Electrical_Connectors"/>
+        <hasMaterial rdf:resource="&thomasnet;H-13_Tool_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;M2_Tool_Steel"/>
+        <hasIndustryFocus rdf:resource="&thomasnet;Medical"/>
+        <hasMaterial rdf:resource="&thomasnet;S7_Tool_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel_15-4"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel_17-4"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel_300"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel_302"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel_304"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel_316"/>
+        <hasMaterial rdf:resource="&thomasnet;Tool_Steel_4130"/>
+        <hasMaterial rdf:resource="&thomasnet;Tool_Steel_4340"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Ram_EDM_Process -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Ram_EDM_Process">
+        <rdf:type rdf:resource="&thomasnet;Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Recreational_Vehicle -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Recreational_Vehicle">
+        <rdf:type rdf:resource="&thomasnet;Industry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#S7_Tool_Steel -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;S7_Tool_Steel">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Sinker_EDM -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Sinker_EDM">
+        <rdf:type rdf:resource="&thomasnet;SinkerEDM"/>
+        <rdf:type rdf:resource="&thomasnet;SupplierCapability"/>
+        <hasTolerance rdf:datatype="&xsd;float">0.001</hasTolerance>
+        <hasMaxLength rdf:datatype="&xsd;float">47.25</hasMaxLength>
+        <hasMaterial rdf:resource="&thomasnet;Aluminum"/>
+        <hasMaterial rdf:resource="&thomasnet;Brass"/>
+        <hasMaterial rdf:resource="&thomasnet;Carbon_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;Castings"/>
+        <hasMaterial rdf:resource="&thomasnet;Extrusions"/>
+        <hasMaterial rdf:resource="&thomasnet;Ferrous"/>
+        <hasMaterial rdf:resource="&thomasnet;Forgings"/>
+        <hasToleranceUnit rdf:resource="&thomasnet;Inch"/>
+        <hasMaxLengthUnit rdf:resource="&thomasnet;Inch"/>
+        <hasMaterial rdf:resource="&thomasnet;Non-Ferrouss"/>
+        <hasMaterial rdf:resource="&thomasnet;Plastics"/>
+        <hasProcess rdf:resource="&thomasnet;Sinker_EDM_Process"/>
+        <hasProcess rdf:resource="&thomasnet;Small_Hole_EDM_Process"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;Titanium"/>
+        <hasProcess rdf:resource="&thomasnet;Wire_EDM_Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Sinker_EDM_Machine -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Sinker_EDM_Machine">
+        <rdf:type rdf:resource="&thomasnet;EquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Sinker_EDM_Process -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Sinker_EDM_Process">
+        <rdf:type rdf:resource="&thomasnet;Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Small_Hole_EDM_Process -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Small_Hole_EDM_Process">
+        <rdf:type rdf:resource="&thomasnet;Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Stainless_Steel -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Stainless_Steel">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Stainless_Steel_15-4 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Stainless_Steel_15-4">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Stainless_Steel_17-4 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Stainless_Steel_17-4">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Stainless_Steel_300 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Stainless_Steel_300">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Stainless_Steel_300_Series -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Stainless_Steel_300_Series">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Stainless_Steel_302 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Stainless_Steel_302">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Stainless_Steel_304 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Stainless_Steel_304">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Stainless_Steel_316 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Stainless_Steel_316">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Supplier_1 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Supplier_1">
+        <rdf:type rdf:resource="&thomasnet;Supplier"/>
+        <hasCapability rdf:resource="&thomasnet;CNC_Machining"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Supplier_2 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Supplier_2">
+        <rdf:type rdf:resource="&thomasnet;Supplier"/>
+        <hasCapability rdf:resource="&thomasnet;CNCAndConventionalMachining_TurningAndMilling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Supplier_3 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Supplier_3">
+        <rdf:type rdf:resource="&thomasnet;Supplier"/>
+        <hasCapability rdf:resource="&thomasnet;EDM_Capability"/>
+        <hasCapability rdf:resource="&thomasnet;Sinker_EDM"/>
+        <hasCapability rdf:resource="&thomasnet;Wire_EDM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Supplier_4 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Supplier_4">
+        <rdf:type rdf:resource="&thomasnet;Supplier"/>
+        <hasCapability rdf:resource="&thomasnet;ElectricalDischargeMachiningServices"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Supplier_5 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Supplier_5">
+        <rdf:type rdf:resource="&thomasnet;Supplier"/>
+        <hasCapability rdf:resource="&thomasnet;WireElectricalDischargeMachining"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Supplier_6 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Supplier_6">
+        <rdf:type rdf:resource="&thomasnet;Supplier"/>
+        <hasCapability rdf:resource="&thomasnet;CustomMoldsforPlasticRubberDieCastParts"/>
+        <hasCapability rdf:resource="&thomasnet;PrototypeAndProductionMoldDesignAndManufacturing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Supplier_7 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Supplier_7">
+        <rdf:type rdf:resource="&thomasnet;Supplier"/>
+        <hasCapability rdf:resource="&thomasnet;PlasticMoldMakingServices"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Supplier_8 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Supplier_8">
+        <rdf:type rdf:resource="&thomasnet;Supplier"/>
+        <hasCapability rdf:resource="&thomasnet;MoldDesignAndBuild"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Surface_Grinder_Machine -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Surface_Grinder_Machine">
+        <rdf:type rdf:resource="&thomasnet;EquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Thousand -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Thousand">
+        <rdf:type rdf:resource="&thomasnet;UnitCode"/>
+        <rdfs:comment>1000 parts/pieces count</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Three_R_Robot_Process -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Three_R_Robot_Process">
+        <rdf:type rdf:resource="&thomasnet;Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Titanium -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Titanium">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Titanium_Alloy_CP2 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Titanium_Alloy_CP2">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Titanium_Alloy_CP4 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Titanium_Alloy_CP4">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Titanium_Alloy_Ti_6AI-4V -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Titanium_Alloy_Ti_6AI-4V">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Titanium_Alloy_Ti_6AI-4V_ELI -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Titanium_Alloy_Ti_6AI-4V_ELI">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Tool_Steel -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Tool_Steel">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Tool_Steel_4130 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Tool_Steel_4130">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Tool_Steel_4340 -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Tool_Steel_4340">
+        <rdf:type rdf:resource="&thomasnet;Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Transfer_Compression_(Rubber_or_Silicone) -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Transfer_Compression_(Rubber_or_Silicone)">
+        <rdf:type rdf:resource="&thomasnet;MoldType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Verticle_CNC_Milling_Machine -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Verticle_CNC_Milling_Machine">
+        <rdf:type rdf:resource="&thomasnet;EquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#WireElectricalDischargeMachining -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;WireElectricalDischargeMachining">
+        <rdf:type rdf:resource="&thomasnet;RamEDM"/>
+        <rdf:type rdf:resource="&thomasnet;SinkerEDM"/>
+        <rdf:type rdf:resource="&thomasnet;SmallHoleEDM"/>
+        <rdf:type rdf:resource="&thomasnet;SupplierCapability"/>
+        <rdf:type rdf:resource="&thomasnet;WireEDMServices"/>
+        <hasTolerance rdf:datatype="&xsd;float">0.000001</hasTolerance>
+        <hasProductionVolumeMin rdf:datatype="&xsd;int">1</hasProductionVolumeMin>
+        <hasProductionVolumeMax rdf:datatype="&xsd;int">1000000</hasProductionVolumeMax>
+        <hasMaxLength rdf:datatype="&xsd;float">20</hasMaxLength>
+        <hasMaterial rdf:resource="&thomasnet;Alloy_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;Aluminum"/>
+        <hasMaterial rdf:resource="&thomasnet;Brass"/>
+        <hasMaterial rdf:resource="&thomasnet;Carbon_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;Cobalt"/>
+        <hasProductionVolumeMinUnit rdf:resource="&thomasnet;EA"/>
+        <hasProductionVolumeMaxUnit rdf:resource="&thomasnet;EA"/>
+        <hasProcess rdf:resource="&thomasnet;EDM_Drilling_Process"/>
+        <hasProcess rdf:resource="&thomasnet;Electrode_Machining_Process"/>
+        <hasToleranceUnit rdf:resource="&thomasnet;Inch"/>
+        <hasMaxLengthUnit rdf:resource="&thomasnet;Inch"/>
+        <hasProcess rdf:resource="&thomasnet;Sinker_EDM_Process"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel"/>
+        <hasProcess rdf:resource="&thomasnet;Three_R_Robot_Process"/>
+        <hasMaterial rdf:resource="&thomasnet;Titanium"/>
+        <hasProcess rdf:resource="&thomasnet;Wire_EDM_Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Wire_EDM -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Wire_EDM">
+        <rdf:type rdf:resource="&thomasnet;SupplierCapability"/>
+        <rdf:type rdf:resource="&thomasnet;WireEDMServices"/>
+        <hasTolerance rdf:datatype="&xsd;float">0.005</hasTolerance>
+        <hasMaxLength rdf:datatype="&xsd;float">18.25</hasMaxLength>
+        <hasMaterial rdf:resource="&thomasnet;Aluminum"/>
+        <hasMaterial rdf:resource="&thomasnet;Brass"/>
+        <hasMaterial rdf:resource="&thomasnet;Carbon_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;Castings"/>
+        <hasMaterial rdf:resource="&thomasnet;Extrusions"/>
+        <hasMaterial rdf:resource="&thomasnet;Ferrous"/>
+        <hasMaterial rdf:resource="&thomasnet;Forgings"/>
+        <hasToleranceUnit rdf:resource="&thomasnet;Inch"/>
+        <hasMaxLengthUnit rdf:resource="&thomasnet;Inch"/>
+        <hasMaterial rdf:resource="&thomasnet;Non-Ferrouss"/>
+        <hasMaterial rdf:resource="&thomasnet;Plastics"/>
+        <hasProcess rdf:resource="&thomasnet;Sinker_EDM_Process"/>
+        <hasProcess rdf:resource="&thomasnet;Small_Hole_EDM_Process"/>
+        <hasMaterial rdf:resource="&thomasnet;Stainless_Steel"/>
+        <hasMaterial rdf:resource="&thomasnet;Titanium"/>
+        <hasProcess rdf:resource="&thomasnet;Wire_EDM_Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#Wire_EDM_Process -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;Wire_EDM_Process">
+        <rdf:type rdf:resource="&thomasnet;Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nist.gov/simca/msnm/sample/thomasnet.owl#mm -->
+
+    <owl:NamedIndividual rdf:about="&thomasnet;mm">
+        <rdf:type rdf:resource="&thomasnet;UnitCode"/>
+        <rdfs:comment>Length measure in millimeters</rdfs:comment>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

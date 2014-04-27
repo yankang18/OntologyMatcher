@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/site/css
+END
+print.css
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/site/css/print.css
+END
+maven-base.css
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/site/css/maven-base.css
+END
+maven-theme.css
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/site/css/maven-theme.css
+END
+site.css
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/site/css/site.css
+END

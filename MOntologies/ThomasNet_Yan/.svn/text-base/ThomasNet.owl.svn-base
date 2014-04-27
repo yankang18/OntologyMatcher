@@ -1,0 +1,953 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:CR="http://www.umbc.edu/example/ThomasNet.owl#CR/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:ThomasNet="http://www.umbc.edu/example/ThomasNet.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.umbc.edu/example/ThomasNet.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="ComplexAndDifficultMachining">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="GeneralMachining"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CustomManufacturingAndFabricating">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ProductOrService"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="EDM">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Machining"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Material"/>
+  <owl:Class rdf:about="#Machining">
+    <rdfs:subClassOf rdf:resource="#CustomManufacturingAndFabricating"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Supplier"/>
+  <owl:Class rdf:ID="Capability"/>
+  <owl:Class rdf:ID="DiesAndMolds">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="MachineryToolsAndSupplies"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#MachineryToolsAndSupplies">
+    <rdfs:subClassOf rdf:resource="#ProductOrService"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Unit">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <ThomasNet:Unit rdf:ID="EA">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Unit>
+          <ThomasNet:Unit rdf:ID="Inch">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Unit>
+          <ThomasNet:Unit rdf:ID="Thousands">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Unit>
+          <ThomasNet:Unit rdf:ID="mm">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Unit>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="CNC_Machining">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="CNC"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Industry"/>
+  <owl:Class rdf:about="#CNC">
+    <rdfs:subClassOf rdf:resource="#Machining"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Computer Numerical Control</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="QuantitativeType"/>
+  <owl:Class rdf:ID="MoldType"/>
+  <owl:Class rdf:ID="Process"/>
+  <owl:Class rdf:ID="EquipmentType"/>
+  <owl:Class rdf:about="#GeneralMachining">
+    <rdfs:subClassOf rdf:resource="#Machining"/>
+  </owl:Class>
+  <owl:Class rdf:ID="InjectionMolds">
+    <rdfs:subClassOf rdf:resource="#DiesAndMolds"/>
+  </owl:Class>
+  <owl:Class rdf:ID="QuantitativeValue"/>
+  <owl:ObjectProperty rdf:ID="relatedIndustry">
+    <rdfs:range rdf:resource="#Industry"/>
+    <rdfs:domain rdf:resource="#Capability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasMinValueUnit">
+    <rdfs:range rdf:resource="#Unit"/>
+    <rdfs:domain rdf:resource="#QuantitativeValue"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="supports">
+    <rdfs:range rdf:resource="#MoldType"/>
+    <rdfs:domain rdf:resource="#Capability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isEnabledBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="enables"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#EquipmentType"/>
+    <rdfs:domain rdf:resource="#Capability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="needMaterial">
+    <rdfs:range rdf:resource="#Material"/>
+    <rdfs:domain rdf:resource="#Capability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasProcess">
+    <rdfs:range rdf:resource="#Process"/>
+    <rdfs:domain rdf:resource="#Capability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasCapability">
+    <rdfs:domain rdf:resource="#Supplier"/>
+    <rdfs:range rdf:resource="#Capability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasType">
+    <rdfs:domain rdf:resource="#QuantitativeValue"/>
+    <rdfs:range rdf:resource="#QuantitativeType"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasValueUnit">
+    <rdfs:range rdf:resource="#Unit"/>
+    <rdfs:domain rdf:resource="#QuantitativeValue"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasMaxValueUnit">
+    <rdfs:range rdf:resource="#Unit"/>
+    <rdfs:domain rdf:resource="#QuantitativeValue"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#enables">
+    <rdfs:domain rdf:resource="#EquipmentType"/>
+    <rdfs:range rdf:resource="#Capability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasQuantitativeValue">
+    <rdfs:range rdf:resource="#QuantitativeValue"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="hasMaxValue">
+    <rdfs:domain rdf:resource="#QuantitativeValue"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCapabilityName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Capability"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasMinValue">
+    <rdfs:domain rdf:resource="#QuantitativeValue"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Supplier"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasValue">
+    <rdfs:domain rdf:resource="#QuantitativeValue"/>
+  </owl:DatatypeProperty>
+  <ThomasNet:Supplier rdf:ID="Supplier_8">
+    <ThomasNet:hasCapability>
+      <ThomasNet:InjectionMolds rdf:ID="Capability_11">
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="Music">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="Industrial">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:supports>
+          <ThomasNet:MoldType rdf:ID="DieCastMolds">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:MoldType>
+        </ThomasNet:supports>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="RecreationalVehicle">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="Electrical">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="Marine">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:isEnabledBy>
+          <ThomasNet:EquipmentType rdf:ID="Electrical_Discharge_Machine">
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Electrical Discharge Machining</rdfs:label>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:EquipmentType>
+        </ThomasNet:isEnabledBy>
+        <ThomasNet:supports>
+          <ThomasNet:MoldType rdf:ID="CollapsibleCore">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:MoldType>
+        </ThomasNet:supports>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="BuildingOrConstruction">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:supports>
+          <ThomasNet:MoldType rdf:ID="Hot_Runners">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:MoldType>
+        </ThomasNet:supports>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="H-13_Tool_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:supports>
+          <ThomasNet:MoldType rdf:ID="MultiCavityOrFamilyInjectionMolds">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:MoldType>
+        </ThomasNet:supports>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="FoodProcessing">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="Optical">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <rdf:type rdf:resource="#Capability"/>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="Aerospace">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="Medical">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="MilitaryOrGovernment">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="Communication">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:isEnabledBy>
+          <ThomasNet:EquipmentType rdf:ID="Verticle_CNC_Milling_Machine">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:EquipmentType>
+        </ThomasNet:isEnabledBy>
+        <ThomasNet:supports>
+          <ThomasNet:MoldType rdf:ID="Blow_Molds">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:MoldType>
+        </ThomasNet:supports>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="ConsumerGoods">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="Electronic">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="P-20">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:hasCapabilityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Mold Design and Build</ThomasNet:hasCapabilityName>
+      </ThomasNet:InjectionMolds>
+    </ThomasNet:hasCapability>
+    <ThomasNet:hasCompanyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Klann Plastics and Canyon Plastics</ThomasNet:hasCompanyName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </ThomasNet:Supplier>
+  <owl:Axiom>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedSource rdf:resource="#mm"/>
+    <owl:annotatedTarget rdf:resource="#Unit"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >length measure in millimeters</rdfs:comment>
+  </owl:Axiom>
+  <ThomasNet:Supplier rdf:ID="Supplier_5">
+    <ThomasNet:hasCapability>
+      <ThomasNet:SmallHoleEDM rdf:ID="Capability_7">
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Stainless_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Aluminum">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:hasProcess>
+          <ThomasNet:Process rdf:ID="ElectrodeMachining">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Process>
+        </ThomasNet:hasProcess>
+        <ThomasNet:hasProcess>
+          <ThomasNet:Process rdf:ID="SinkerElectricalDischargeMachining"/>
+        </ThomasNet:hasProcess>
+        <ThomasNet:hasCapabilityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Wire Electrical Discharge machining</ThomasNet:hasCapabilityName>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Cobalt">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Brass">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:hasProcess>
+          <ThomasNet:Process rdf:ID="EDMDrilling">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Process>
+        </ThomasNet:hasProcess>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Titanium">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Carbon_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <rdf:type>
+          <owl:NamedIndividual rdf:ID="SinkerEDM">
+            <rdfs:subClassOf rdf:resource="#EDM"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+          </owl:NamedIndividual>
+        </rdf:type>
+        <ThomasNet:hasQuantitativeValue>
+          <ThomasNet:QuantitativeValue rdf:ID="QuantitativeValue73">
+            <ThomasNet:hasValueUnit rdf:resource="#Inch"/>
+            <ThomasNet:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+            >0.000001</ThomasNet:hasValue>
+            <ThomasNet:hasType>
+              <ThomasNet:QuantitativeType rdf:ID="Tolerance">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+              </ThomasNet:QuantitativeType>
+            </ThomasNet:hasType>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:QuantitativeValue>
+        </ThomasNet:hasQuantitativeValue>
+        <ThomasNet:hasQuantitativeValue>
+          <ThomasNet:QuantitativeValue rdf:ID="QuantitativeValue71">
+            <ThomasNet:hasType>
+              <ThomasNet:QuantitativeType rdf:ID="ProductionVolume">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+              </ThomasNet:QuantitativeType>
+            </ThomasNet:hasType>
+            <ThomasNet:hasMinValueUnit rdf:resource="#EA"/>
+            <ThomasNet:hasMaxValueUnit rdf:resource="#EA"/>
+            <ThomasNet:hasMaxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1000000</ThomasNet:hasMaxValue>
+            <ThomasNet:hasMinValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1</ThomasNet:hasMinValue>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:QuantitativeValue>
+        </ThomasNet:hasQuantitativeValue>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <ThomasNet:hasProcess>
+          <ThomasNet:Process rdf:about="#3R_Robot">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Process>
+        </ThomasNet:hasProcess>
+        <rdf:type rdf:resource="#Capability"/>
+        <ThomasNet:hasProcess>
+          <ThomasNet:Process rdf:ID="WireElectricalDischargeMachining"/>
+        </ThomasNet:hasProcess>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Alloy_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:hasQuantitativeValue>
+          <ThomasNet:QuantitativeValue rdf:ID="QuantitativeValue72">
+            <ThomasNet:hasType>
+              <ThomasNet:QuantitativeType rdf:ID="Length">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+              </ThomasNet:QuantitativeType>
+            </ThomasNet:hasType>
+            <ThomasNet:hasMaxValueUnit rdf:resource="#Inch"/>
+            <ThomasNet:hasMaxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >20</ThomasNet:hasMaxValue>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:QuantitativeValue>
+        </ThomasNet:hasQuantitativeValue>
+        <rdf:type>
+          <owl:NamedIndividual rdf:ID="WireEDM">
+            <rdfs:subClassOf rdf:resource="#EDM"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+          </owl:NamedIndividual>
+        </rdf:type>
+        <rdf:type>
+          <owl:NamedIndividual rdf:ID="RamEDM">
+            <rdfs:subClassOf rdf:resource="#EDM"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+          </owl:NamedIndividual>
+        </rdf:type>
+      </ThomasNet:SmallHoleEDM>
+    </ThomasNet:hasCapability>
+    <ThomasNet:hasCompanyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Wiegle Tool</ThomasNet:hasCompanyName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </ThomasNet:Supplier>
+  <ThomasNet:Supplier rdf:ID="Supplier_6">
+    <ThomasNet:hasCapability>
+      <ThomasNet:Capability rdf:ID="Capability_9">
+        <ThomasNet:needMaterial rdf:resource="#H-13_Tool_Steel"/>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="ElectricalConnectors">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:about="#17-4_Stainless_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:hasCapabilityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Prototype and Production Mold Design &amp; Manufacturing</ThomasNet:hasCapabilityName>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="D2_Tool_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:about="#4130_Tool_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:about="#15-4_Stainless_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:isEnabledBy>
+          <ThomasNet:EquipmentType rdf:ID="CNC_3-axis_Milling_Machine">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:EquipmentType>
+        </ThomasNet:isEnabledBy>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="S7_Tool_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="Automotive">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:about="#304_Stainless_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:relatedIndustry>
+          <ThomasNet:Industry rdf:ID="Commercial">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Industry>
+        </ThomasNet:relatedIndustry>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:about="#316_Stainless_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:relatedIndustry rdf:resource="#Aerospace"/>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="M2_Tool_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:about="#4340_Tool_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:about="#302_Stainless_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:about="#300_Stainless_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:isEnabledBy>
+          <ThomasNet:EquipmentType rdf:ID="CNC_4-axis_Milling_Machine">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:EquipmentType>
+        </ThomasNet:isEnabledBy>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="A-2_Tool_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <rdf:type rdf:resource="#InjectionMolds"/>
+        <ThomasNet:relatedIndustry rdf:resource="#Medical"/>
+        <ThomasNet:isEnabledBy rdf:resource="#Electrical_Discharge_Machine"/>
+      </ThomasNet:Capability>
+    </ThomasNet:hasCapability>
+    <ThomasNet:hasCapability>
+      <ThomasNet:Capability rdf:ID="Capability_8">
+        <ThomasNet:needMaterial rdf:resource="#M2_Tool_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#D2_Tool_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#15-4_Stainless_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#4340_Tool_Steel"/>
+        <ThomasNet:isEnabledBy rdf:resource="#CNC_3-axis_Milling_Machine"/>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:about="#CR/HR_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial rdf:resource="#300_Stainless_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#S7_Tool_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#A-2_Tool_Steel"/>
+        <rdf:type rdf:resource="#InjectionMolds"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <ThomasNet:relatedIndustry rdf:resource="#Medical"/>
+        <ThomasNet:needMaterial rdf:resource="#304_Stainless_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#H-13_Tool_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#316_Stainless_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#302_Stainless_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#4130_Tool_Steel"/>
+        <ThomasNet:isEnabledBy rdf:resource="#CNC_4-axis_Milling_Machine"/>
+        <ThomasNet:relatedIndustry rdf:resource="#Automotive"/>
+        <ThomasNet:hasCapabilityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Custom Molds for Plastic, Rubber, and Die Cast Parts</ThomasNet:hasCapabilityName>
+        <ThomasNet:relatedIndustry rdf:resource="#Commercial"/>
+        <ThomasNet:relatedIndustry rdf:resource="#ElectricalConnectors"/>
+        <ThomasNet:needMaterial rdf:resource="#17-4_Stainless_Steel"/>
+        <ThomasNet:relatedIndustry rdf:resource="#Aerospace"/>
+      </ThomasNet:Capability>
+    </ThomasNet:hasCapability>
+    <ThomasNet:hasCompanyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Industrial Tools&amp;Die</ThomasNet:hasCompanyName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </ThomasNet:Supplier>
+  <ThomasNet:Supplier rdf:ID="Supplier_7">
+    <ThomasNet:hasCapability>
+      <ThomasNet:InjectionMolds rdf:ID="Capability_10">
+        <ThomasNet:isEnabledBy>
+          <ThomasNet:EquipmentType rdf:ID="Honing_Machine">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:EquipmentType>
+        </ThomasNet:isEnabledBy>
+        <ThomasNet:supports>
+          <ThomasNet:MoldType rdf:ID="Plastic_Injection">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:MoldType>
+        </ThomasNet:supports>
+        <ThomasNet:isEnabledBy rdf:resource="#Verticle_CNC_Milling_Machine"/>
+        <ThomasNet:isEnabledBy>
+          <ThomasNet:EquipmentType rdf:ID="Engraving_Machine">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:EquipmentType>
+        </ThomasNet:isEnabledBy>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Fully_Hardened_Tool_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:supports rdf:resource="#Hot_Runners"/>
+        <ThomasNet:needMaterial rdf:resource="#Aluminum"/>
+        <ThomasNet:supports>
+          <ThomasNet:MoldType rdf:ID="Inserts_Only">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:MoldType>
+        </ThomasNet:supports>
+        <rdf:type rdf:resource="#Capability"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <ThomasNet:isEnabledBy>
+          <ThomasNet:EquipmentType rdf:ID="Surface_Grinder">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:EquipmentType>
+        </ThomasNet:isEnabledBy>
+        <ThomasNet:hasCapabilityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Plastic Mold Making Services</ThomasNet:hasCapabilityName>
+        <ThomasNet:isEnabledBy>
+          <ThomasNet:EquipmentType rdf:ID="Jig_Machine">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:EquipmentType>
+        </ThomasNet:isEnabledBy>
+        <ThomasNet:isEnabledBy>
+          <ThomasNet:EquipmentType rdf:ID="Lathe">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:EquipmentType>
+        </ThomasNet:isEnabledBy>
+        <ThomasNet:supports rdf:resource="#Blow_Molds"/>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Pre-hardended_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:supports>
+          <ThomasNet:MoldType rdf:ID="TransferOrCompression">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:MoldType>
+        </ThomasNet:supports>
+        <ThomasNet:supports>
+          <ThomasNet:MoldType rdf:ID="Liquid_Silicone_Molds">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:MoldType>
+        </ThomasNet:supports>
+        <ThomasNet:isEnabledBy>
+          <ThomasNet:EquipmentType rdf:ID="Sinker_EDM">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:EquipmentType>
+        </ThomasNet:isEnabledBy>
+      </ThomasNet:InjectionMolds>
+    </ThomasNet:hasCapability>
+    <ThomasNet:hasCompanyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Pro Mold</ThomasNet:hasCompanyName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </ThomasNet:Supplier>
+  <ThomasNet:Material rdf:ID="Chrome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </ThomasNet:Material>
+  <ThomasNet:Supplier rdf:ID="Supplier_3">
+    <ThomasNet:hasCapability>
+      <ThomasNet:EDM rdf:ID="Capability_5">
+        <ThomasNet:hasCapabilityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >EDM</ThomasNet:hasCapabilityName>
+        <rdf:type rdf:resource="#Capability"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </ThomasNet:EDM>
+    </ThomasNet:hasCapability>
+    <ThomasNet:hasCapability>
+      <ThomasNet:Capability rdf:ID="Capability_4">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <ThomasNet:hasProcess rdf:resource="#SinkerElectricalDischargeMachining"/>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Casting">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Forgings">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <rdf:type rdf:resource="#WireEDM"/>
+        <ThomasNet:hasQuantitativeValue>
+          <ThomasNet:QuantitativeValue rdf:ID="QuantitativeValue42">
+            <ThomasNet:hasType rdf:resource="#Tolerance"/>
+            <ThomasNet:hasValueUnit rdf:resource="#Inch"/>
+            <ThomasNet:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+            >0.005</ThomasNet:hasValue>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:QuantitativeValue>
+        </ThomasNet:hasQuantitativeValue>
+        <ThomasNet:hasCapabilityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Wire EDM</ThomasNet:hasCapabilityName>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Non-Ferrous">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Extrusions">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial rdf:resource="#Aluminum"/>
+        <ThomasNet:needMaterial rdf:resource="#Stainless_Steel"/>
+        <ThomasNet:hasQuantitativeValue>
+          <ThomasNet:QuantitativeValue rdf:ID="QuantitativeValue41">
+            <ThomasNet:hasType rdf:resource="#Length"/>
+            <ThomasNet:hasMinValueUnit rdf:resource="#Inch"/>
+            <ThomasNet:hasMaxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+            >18.25</ThomasNet:hasMaxValue>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:QuantitativeValue>
+        </ThomasNet:hasQuantitativeValue>
+        <ThomasNet:hasProcess>
+          <ThomasNet:Process rdf:ID="SmallHoleElectricalDischargeMachining"/>
+        </ThomasNet:hasProcess>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Ferrous">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial rdf:resource="#Brass"/>
+        <ThomasNet:hasProcess rdf:resource="#WireElectricalDischargeMachining"/>
+        <ThomasNet:needMaterial rdf:resource="#Titanium"/>
+        <ThomasNet:needMaterial rdf:resource="#Carbon_Steel"/>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Plastics">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+      </ThomasNet:Capability>
+    </ThomasNet:hasCapability>
+    <ThomasNet:hasCapability>
+      <owl:NamedIndividual rdf:ID="Capability_3">
+        <rdf:type rdf:resource="#Capability"/>
+        <ThomasNet:needMaterial rdf:resource="#Carbon_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#Ferrous"/>
+        <ThomasNet:hasProcess rdf:resource="#SmallHoleElectricalDischargeMachining"/>
+        <ThomasNet:needMaterial rdf:resource="#Casting"/>
+        <ThomasNet:hasProcess rdf:resource="#SinkerElectricalDischargeMachining"/>
+        <ThomasNet:needMaterial rdf:resource="#Extrusions"/>
+        <ThomasNet:needMaterial rdf:resource="#Titanium"/>
+        <ThomasNet:needMaterial rdf:resource="#Non-Ferrous"/>
+        <ThomasNet:needMaterial rdf:resource="#Stainless_Steel"/>
+        <ThomasNet:hasCapabilityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Sinker EDM</ThomasNet:hasCapabilityName>
+        <ThomasNet:hasQuantitativeValue>
+          <ThomasNet:QuantitativeValue rdf:ID="QuantitativeValue32">
+            <ThomasNet:hasType rdf:resource="#Tolerance"/>
+            <ThomasNet:hasValueUnit rdf:resource="#Inch"/>
+            <ThomasNet:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+            >0.001</ThomasNet:hasValue>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:QuantitativeValue>
+        </ThomasNet:hasQuantitativeValue>
+        <ThomasNet:hasQuantitativeValue>
+          <ThomasNet:QuantitativeValue rdf:ID="QuantitativeValue31">
+            <ThomasNet:hasType rdf:resource="#Length"/>
+            <ThomasNet:hasMinValueUnit rdf:resource="#Inch"/>
+            <ThomasNet:hasMaxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+            >47.25</ThomasNet:hasMaxValue>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:QuantitativeValue>
+        </ThomasNet:hasQuantitativeValue>
+        <ThomasNet:needMaterial rdf:resource="#Plastics"/>
+        <ThomasNet:hasProcess rdf:resource="#WireElectricalDischargeMachining"/>
+        <rdf:type rdf:resource="#SinkerEDM"/>
+        <ThomasNet:needMaterial rdf:resource="#Aluminum"/>
+        <ThomasNet:needMaterial rdf:resource="#Brass"/>
+        <ThomasNet:needMaterial rdf:resource="#Forgings"/>
+      </owl:NamedIndividual>
+    </ThomasNet:hasCapability>
+    <ThomasNet:hasCompanyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Astro</ThomasNet:hasCompanyName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </ThomasNet:Supplier>
+  <ThomasNet:Supplier rdf:ID="Supplier_4">
+    <ThomasNet:hasCapability>
+      <ThomasNet:RamEDM rdf:ID="Capability_6">
+        <ThomasNet:needMaterial rdf:resource="#Brass"/>
+        <ThomasNet:hasProcess rdf:resource="#WireElectricalDischargeMachining"/>
+        <ThomasNet:needMaterial rdf:resource="#Carbon_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#Alloy_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#Stainless_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#Aluminum"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="#Capability"/>
+        <ThomasNet:hasCapabilityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Electrical Discharge machining Services</ThomasNet:hasCapabilityName>
+        <rdf:type rdf:resource="#EDM"/>
+        <ThomasNet:hasQuantitativeValue>
+          <ThomasNet:QuantitativeValue rdf:ID="QuantitativeValue61">
+            <ThomasNet:hasType rdf:resource="#ProductionVolume"/>
+            <ThomasNet:hasMinValueUnit rdf:resource="#EA"/>
+            <ThomasNet:hasMaxValueUnit rdf:resource="#EA"/>
+            <ThomasNet:hasMaxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1000</ThomasNet:hasMaxValue>
+            <ThomasNet:hasMinValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1</ThomasNet:hasMinValue>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:QuantitativeValue>
+        </ThomasNet:hasQuantitativeValue>
+        <ThomasNet:hasProcess rdf:resource="#SmallHoleElectricalDischargeMachining"/>
+        <rdf:type rdf:resource="#SinkerEDM"/>
+        <ThomasNet:hasQuantitativeValue>
+          <ThomasNet:QuantitativeValue rdf:ID="QuantitativeValue63">
+            <ThomasNet:hasValueUnit rdf:resource="#mm"/>
+            <ThomasNet:hasType rdf:resource="#Tolerance"/>
+            <ThomasNet:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+            >0.0025</ThomasNet:hasValue>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:QuantitativeValue>
+        </ThomasNet:hasQuantitativeValue>
+        <ThomasNet:hasQuantitativeValue>
+          <ThomasNet:QuantitativeValue rdf:ID="QuantitativeValue62">
+            <ThomasNet:hasType rdf:resource="#Length"/>
+            <ThomasNet:hasMaxValueUnit rdf:resource="#Inch"/>
+            <ThomasNet:hasMaxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+            >20</ThomasNet:hasMaxValue>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:QuantitativeValue>
+        </ThomasNet:hasQuantitativeValue>
+        <ThomasNet:hasProcess rdf:resource="#SinkerElectricalDischargeMachining"/>
+        <ThomasNet:needMaterial rdf:resource="#Cobalt"/>
+      </ThomasNet:RamEDM>
+    </ThomasNet:hasCapability>
+    <ThomasNet:hasCompanyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bob's Design</ThomasNet:hasCompanyName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </ThomasNet:Supplier>
+  <ThomasNet:QuantitativeValue rdf:ID="QuantitativeValue23">
+    <ThomasNet:hasType rdf:resource="#Tolerance"/>
+    <ThomasNet:hasValueUnit rdf:resource="#Inch"/>
+    <ThomasNet:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+    >0.001</ThomasNet:hasValue>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </ThomasNet:QuantitativeValue>
+  <owl:Axiom>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="#Unit"/>
+    <owl:annotatedSource rdf:resource="#EA"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >each part/piece count</rdfs:comment>
+  </owl:Axiom>
+  <ThomasNet:Supplier rdf:ID="Supplier_1">
+    <ThomasNet:hasCapability>
+      <ThomasNet:CNC_Machining rdf:ID="Capability_1">
+        <ThomasNet:needMaterial rdf:resource="#Stainless_Steel"/>
+        <ThomasNet:needMaterial rdf:resource="#Aluminum"/>
+        <ThomasNet:needMaterial rdf:resource="#A-2_Tool_Steel"/>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="A-6_Tool_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Tool_Steel">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial rdf:resource="#Titanium"/>
+        <ThomasNet:hasProcess rdf:resource="#WireElectricalDischargeMachining"/>
+        <rdf:type rdf:resource="#Capability"/>
+        <ThomasNet:needMaterial rdf:resource="#H-13_Tool_Steel"/>
+        <rdf:type rdf:resource="#SinkerEDM"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <ThomasNet:hasCapabilityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CNC Machining</ThomasNet:hasCapabilityName>
+        <ThomasNet:hasProcess rdf:resource="#SinkerElectricalDischargeMachining"/>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:about="#4140_Alloy_Steels">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+      </ThomasNet:CNC_Machining>
+    </ThomasNet:hasCapability>
+    <ThomasNet:hasCompanyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >B&amp;B</ThomasNet:hasCompanyName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </ThomasNet:Supplier>
+  <owl:Axiom>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="#Unit"/>
+    <owl:annotatedSource rdf:resource="#Thousands"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1000 parts/pieces count</rdfs:comment>
+  </owl:Axiom>
+  <ThomasNet:QuantitativeValue rdf:ID="QuantitativeValue22">
+    <ThomasNet:hasType rdf:resource="#Length"/>
+    <ThomasNet:hasMaxValueUnit rdf:resource="#Inch"/>
+    <ThomasNet:hasMaxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+    >47.25</ThomasNet:hasMaxValue>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </ThomasNet:QuantitativeValue>
+  <ThomasNet:Supplier rdf:ID="Supplier_2">
+    <ThomasNet:hasCapability>
+      <ThomasNet:WireEDM rdf:ID="Capability_2">
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Titanium_Alloy_Ti_6AI-4V_ELI">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:hasCapabilityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CNC &amp; Conventional Machining (Turning &amp; Milling)</ThomasNet:hasCapabilityName>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Titanium_Alloy_CP2">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Titanium_Alloy_Ti_6AI-4V">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Columbium">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:hasProcess rdf:resource="#WireElectricalDischargeMachining"/>
+        <ThomasNet:hasProcess rdf:resource="#SinkerElectricalDischargeMachining"/>
+        <ThomasNet:needMaterial rdf:resource="#Titanium"/>
+        <rdf:type rdf:resource="#SinkerEDM"/>
+        <ThomasNet:needMaterial rdf:resource="#Aluminum"/>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Titanium_Alloy_CP4">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <rdf:type rdf:resource="#CNC_Machining"/>
+        <ThomasNet:needMaterial>
+          <ThomasNet:Material rdf:ID="Stainless_Steel_300_Series">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:Material>
+        </ThomasNet:needMaterial>
+        <ThomasNet:needMaterial rdf:resource="#Brass"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <ThomasNet:hasProcess>
+          <ThomasNet:Process rdf:ID="RamElectricalDischargeMachining"/>
+        </ThomasNet:hasProcess>
+        <ThomasNet:hasProcess>
+          <owl:NamedIndividual rdf:ID="PlungerElectricalDischargeMachining">
+            <rdf:type rdf:resource="#Process"/>
+          </owl:NamedIndividual>
+        </ThomasNet:hasProcess>
+        <rdf:type rdf:resource="#Capability"/>
+        <ThomasNet:hasQuantitativeValue>
+          <ThomasNet:QuantitativeValue rdf:ID="QuantitativeValue21">
+            <ThomasNet:hasMaxValueUnit rdf:resource="#Thousands"/>
+            <ThomasNet:hasType rdf:resource="#ProductionVolume"/>
+            <ThomasNet:hasMinValueUnit rdf:resource="#EA"/>
+            <ThomasNet:hasMinValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1</ThomasNet:hasMinValue>
+            <ThomasNet:hasMaxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1</ThomasNet:hasMaxValue>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThomasNet:QuantitativeValue>
+        </ThomasNet:hasQuantitativeValue>
+      </ThomasNet:WireEDM>
+    </ThomasNet:hasCapability>
+    <ThomasNet:hasCompanyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Tecomet</ThomasNet:hasCompanyName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </ThomasNet:Supplier>
+  <owl:Axiom>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="#Unit"/>
+    <owl:annotatedSource rdf:resource="#Inch"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >length measure in inches</rdfs:comment>
+  </owl:Axiom>
+  <ThomasNet:Material rdf:ID="Others">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </ThomasNet:Material>
+  <owl:NamedIndividual rdf:ID="SmallHoleEDM">
+    <rdfs:subClassOf rdf:resource="#EDM"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:NamedIndividual>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

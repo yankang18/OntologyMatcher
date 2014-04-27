@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict
+END
+verb.exc
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/verb.exc
+END
+verb.Framestext
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/verb.Framestext
+END
+data.adj
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/data.adj
+END
+data.verb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/data.verb
+END
+cntlist
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/cntlist
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/Makefile.in
+END
+adj.exc
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/adj.exc
+END
+lexnames
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/lexnames
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/Makefile
+END
+index.adj
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/index.adj
+END
+data.adv
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/data.adv
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/Makefile.am
+END
+log.grind.3.0
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/log.grind.3.0
+END
+index.sense
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/index.sense
+END
+sents.vrb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/sents.vrb
+END
+adv.exc
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/adv.exc
+END
+index.noun
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/index.noun
+END
+index.adv
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/index.adv
+END
+index.verb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/index.verb
+END
+cntlist.rev
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/cntlist.rev
+END
+noun.exc
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/noun.exc
+END
+sense.idx
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/sense.idx
+END
+sentidx.vrb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/sentidx.vrb
+END
+data.noun
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/data.noun
+END
+frames.vrb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/WordNet-3.0/dict/frames.vrb
+END

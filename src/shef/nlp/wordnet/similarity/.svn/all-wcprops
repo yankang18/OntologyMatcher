@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/190/trunk/XMLSchemaMSM/src/shef/nlp/wordnet/similarity
+END
+ICSimilarity.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/252/trunk/XMLSchemaMSM/src/shef/nlp/wordnet/similarity/ICSimilarity.java
+END
+SimilarityMeasure.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/190/trunk/XMLSchemaMSM/src/shef/nlp/wordnet/similarity/SimilarityMeasure.java
+END
+PathMeasure.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/67/trunk/XMLSchemaMSM/src/shef/nlp/wordnet/similarity/PathMeasure.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/67/trunk/XMLSchemaMSM/src/shef/nlp/wordnet/similarity/package-info.java
+END
+JCn.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/67/trunk/XMLSchemaMSM/src/shef/nlp/wordnet/similarity/JCn.java
+END
+ICMeasure.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/67/trunk/XMLSchemaMSM/src/shef/nlp/wordnet/similarity/ICMeasure.java
+END
+SimilarityInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/67/trunk/XMLSchemaMSM/src/shef/nlp/wordnet/similarity/SimilarityInfo.java
+END
+Lin.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/67/trunk/XMLSchemaMSM/src/shef/nlp/wordnet/similarity/Lin.java
+END

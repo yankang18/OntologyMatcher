@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet
+END
+domain_independent.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/domain_independent.txt
+END
+wordnet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/wordnet.xml
+END
+ic-bnc-resnik-add1.dat
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3/OntologyMatcher/conf/configuration/WordNet/ic-bnc-resnik-add1.dat
+END

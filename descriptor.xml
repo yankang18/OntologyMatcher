@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+old schema: http://www.seals-project.eu/schemas/2010-08-15/ToolPackageDescriptor.xsd
+new schema: http://www.seals-project.eu/resources/res/tools/bundle/v1
+-->
+
+<ns:package 	  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:ns="http://www.seals-project.eu/resources/res/tools/bundle/v1"
+	id="EbiquityOntologyMatcher" 
+	version="1.0">
+	<ns:description>DemoMatcher is a matching tool developed for testpurpose.</ns:description>
+	<ns:endorsement>
+		<ns:copyright>Yan Kang</ns:copyright>
+		<ns:license>Specification of license</ns:license>
+	</ns:endorsement>
+	<ns:wrapper>
+		<ns:management>
+			<ns:deploy>
+				<ns:executable xsi:type="ns:ShellScript">
+					<ns:script>deploy.sh</ns:script>
+					<ns:error-log>deploy-error.log</ns:error-log>
+				</ns:executable>
+			</ns:deploy>
+			<ns:start>
+				<ns:executable xsi:type="ns:ShellScript">
+					<ns:script>start.sh</ns:script>
+					<ns:error-log>start-error.log</ns:error-log>
+				</ns:executable>
+			</ns:start>
+			<ns:stop>
+				<ns:executable xsi:type="ns:ShellScript">
+					<ns:script>stop.sh</ns:script>
+					<ns:error-log>stop-error.log</ns:error-log>
+				</ns:executable>
+			</ns:stop>
+			<ns:undeploy>
+				<ns:executable xsi:type="ns:ShellScript">
+					<ns:script>undeploy.sh</ns:script>
+					<ns:error-log>undeploy-error.log</ns:error-log>
+				</ns:executable>
+			</ns:undeploy>
+		</ns:management>
+		<ns:bridge>
+			<!-- references relative to bin folder -->
+			<ns:class>umbc.csee.ebiquity.ontologymatcher.matcherbridge.EbiquityOntologyMatcherBridge</ns:class>
+			<ns:jar>ebiquityontologymatcher-bridge.jar</ns:jar>
+			<ns:dependencies>
+		
+			     <ns:lib>lib/ebiquityontologymatcher.jar</ns:lib>
+			
+			     
+				
+			     <ns:lib>lib/jena/arq-2.8.4.jar</ns:lib>
+	
+			     <ns:lib>lib/jena/icu4j-3.4.4.jar</ns:lib>
+			     <ns:lib>lib/jena/iri-0.8-sources.jar</ns:lib>
+			     <ns:lib>lib/jena/iri-0.8.jar</ns:lib>
+			     <ns:lib>lib/jena/jena-2.6.3-tests.jar</ns:lib>
+			     <ns:lib>lib/jena/jena-2.6.3.jar</ns:lib>
+			     <ns:lib>lib/jena/junit-4.5.jar</ns:lib>
+			     <ns:lib>lib/jena/log4j-1.2.13.jar</ns:lib>
+			     <ns:lib>lib/jena/lucene-core-2.3.1.jar</ns:lib>
+			     <ns:lib>lib/jena/slf4j-api-1.5.8.jar</ns:lib>
+			     <ns:lib>lib/jena/slf4j-log4j12-1.5.8.jar</ns:lib>
+			     <ns:lib>lib/jena/stax-api-1.0.1.jar</ns:lib>
+			     <ns:lib>lib/jena/wstx-asl-3.2.9.jar</ns:lib>
+			     <ns:lib>lib/jena/xercesimpl-2.7.1.jar</ns:lib>
+
+
+			     
+			     <ns:lib>lib/pellet/aterm-java-1.6.jar</ns:lib>
+			     <ns:lib>lib/pellet/jgrapht-0.6.0.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/jgrapht-jdk1.6.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-cli.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-core.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-datatypes.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-dig.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-el.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-explanation.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-jena.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-modularity.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-owlapi.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-owlapiv3.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-pellint.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-query.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-rules.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/pellet-test.jar</ns:lib>
+
+			     <ns:lib>lib/pellet/servelt.jar</ns:lib>
+
+			     
+
+			     <ns:lib>lib/SEALS/seals-omt-client.jar</ns:lib>
+
+			     
+			     <ns:lib>lib/other/commons-io-1.3.2.jar</ns:lib>
+
+			     <ns:lib>lib/other/javawordnetsim.jar</ns:lib>
+
+			     <ns:lib>lib/other/jaws-bin.jar</ns:lib>
+
+			     <ns:lib>lib/other/jdom.jar</ns:lib>
+
+			     <ns:lib>lib/other/jwnl.jar</ns:lib>
+
+			     <ns:lib>lib/other/log4j-1.2.13.jar</ns:lib>
+
+			     <ns:lib>lib/other/simmetrics.jar</ns:lib>
+
+		    </ns:dependencies>
+	
+		</ns:bridge>
+	</ns:wrapper>
+</ns:package>
+

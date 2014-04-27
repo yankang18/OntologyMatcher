@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging
+END
+commons-logging-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/commons-logging-1.1.1.jar
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/LICENSE.txt
+END
+NOTICE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/NOTICE.txt
+END
+commons-logging-1.1.1-javadoc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/commons-logging-1.1.1-javadoc.jar
+END
+commons-logging-tests.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/commons-logging-tests.jar
+END
+commons-logging-1.1.1-sources.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/commons-logging-1.1.1-sources.jar
+END
+RELEASE-NOTES.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/RELEASE-NOTES.txt
+END
+commons-logging-adapters-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/commons-logging-adapters-1.1.1.jar
+END
+commons-logging-api-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3/OntologyMatcher/lib/commons-logging/commons-logging-api-1.1.1.jar
+END
